@@ -1,4 +1,4 @@
-# Facilitation Based Course Project Facilito - WL
+# Angular Practice Project. Based on CursosFacilito - WL
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
 
