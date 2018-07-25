@@ -1,6 +1,6 @@
-# CursosFacilito
+# Proyecto de Practica Basado en Cursos Facilito
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.0.
 
 ## Development server
 
