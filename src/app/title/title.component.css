@@ -9,6 +9,7 @@
 h3{
   margin-right: 0px;
 }
+
 :host-context(.dark) h1 {
     background-color: grey;
     color: black;
@@ -19,6 +20,10 @@ a {
     margin: 1em 0;
     cursor: pointer;
     text-decoration: underline;
+}
+
+.category{
+  display: inline-block;
 }
 
 .highlight {

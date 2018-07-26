@@ -9,19 +9,20 @@ import {Component, OnInit} from '@angular/core';
 
 export class TitleComponent implements OnInit{
   public name = 'Williams' ;
-  public edad: number;
-  public edades: number[];
+  // public edad: number;
+  // public edades: number[];
   public moreInformation= false;
   public isAvailable = true;
-
+  public category: string[]; // mobile, web other
   public topics: string[];
 
   // public css_classes: string[] = ['active', 'shadow'];
   constructor() {}
 
   ngOnInit(){
+    this.category = ['web'];
     this.name = 'Williams' ;
-    this.topics= [
+    this.topics = [
       'Fundamnetos del Framework',
       'Componentes',
       'Directivas',
@@ -31,16 +32,19 @@ export class TitleComponent implements OnInit{
       'Binding'
     ];
 
-    // this.edad = 45 ;
-
+     // this.edad = 45 ;
     // setTimeout(() => this.name = 'Williams Daniel', 3000)
     // setTimeout(() => this.isAvailable = false, 3000)
     // setTimeout(() => this.css_classes = ['shadow'], 3000)
     // setTimeout(() => this.moreInformation = true, 3000)
   }
 
-  getEdadNombre(): string {
-    return `${this.name} : ${this.edad}`;
+  // getEdadNombre(): string {
+  //   return `${this.name} : ${this.edad}`;
+  // }
+
+  toggleMoreInformation(){
+    this.moreInformation = !this.moreInformation;
   }
 
 }

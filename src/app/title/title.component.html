@@ -3,13 +3,20 @@
 <ng-template #available>
     <span class="highlight">Curso Dispobible</span>
 </ng-template>
-
+<div class="category" [ngSwitch]="category">
+  <span *ngSwitchCase= "'web'">Desarrollo Web</span>
+  <span *ngSwitchCase= "'mobile'">Desarrollo Móvil</span>
+  <span *ngSwitchCase= "'other'">Desarrollo General</span>
+  <span *ngSwitchDefault>No Especificado</span>
+</div>
 <h3>Tutor: {{ name }} </h3>
 <div class="">
-    <a>Más Información <i class="fa " [ngClass]="{'fa-chevron-circle-down': !moreInformation,
-      'fa-chevron-circle-up': moreInformation}"></i></a>
+    <a (click)="toggleMoreInformation()">Más Información <i class="fa "
+      [ngClass]="{'fa-chevron-circle-down': !moreInformation,'fa-chevron-circle-up':
+      moreInformation}"></i></a>
     <p *ngIf="moreInformation">
-        Este es un curso de Angular con duración de 3 horas en el que aprederás temas como Componentes, Servicios, Animaciones, Módulos, fundamentos del framework y mucho más.
+        Este es un curso de Angular con duración de 3 horas en el que aprederás temas como Componentes,
+        Servicios, Animaciones, Módulos, fundamentos del framework y mucho más.
     </p>
 </div>
 
@@ -18,5 +25,6 @@
 </ul>
 
 <div>
-    <button [disabled]="isAvailable" [ngClass]="{active: isAvailable, shadow: !isAvailable}" type="button" name="button">Inscribir</button>
+    <button [disabled]="isAvailable" [ngClass]="{active: isAvailable, shadow: !isAvailable}"
+    type="button" name="button">Inscribir</button>
 </div>
