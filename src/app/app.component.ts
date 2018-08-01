@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  public userSubscribed = false;
+
+  subscriptionChanged(ev: any) {
+    console.log('El usuario se subscribio');
+    this.userSubscribed = ev;
+  }
 }

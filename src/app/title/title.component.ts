@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 
 @Component({
@@ -12,9 +12,14 @@ export class TitleComponent implements OnInit{
   // public edad: number;
   // public edades: number[];
   public moreInformation= false;
-  public isAvailable = true;
+  public isAvailable = false;
   public category: string[]; // mobile, web other
   public topics: string[];
+  public launchDate: Date;
+  public price = 25;
+  public seconds = 9720;
+
+  @Input() subscribed: boolean;
 
   // public css_classes: string[] = ['active', 'shadow'];
   constructor() {}
@@ -22,6 +27,7 @@ export class TitleComponent implements OnInit{
   ngOnInit(){
     this.category = ['web'];
     this.name = 'Williams' ;
+    this.launchDate = new Date(2018,11,25);
     this.topics = [
       'Fundamnetos del Framework',
       'Componentes',
